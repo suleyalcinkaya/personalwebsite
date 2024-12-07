@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+header {
+    position: absolute;   
+    top: 0;               
+    left: 0;              
+    right: 0;             
+    z-index: 10;          
+    background-color: transparent;  
+    padding: 20px;     
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;  
+  }
+  
+ 
+  .info {
+    position: relative;   
+    padding: 40px 20px;   
+    background-color: #f0f0f0;  
+    margin-top: 80px;     
+  }
+  
+  
+  .info-content {
+    max-width: 800px;     
+    margin: 0 auto;       
+  }
+  
+ 
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column; 
+  }
+  }

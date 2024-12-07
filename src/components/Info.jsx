@@ -1,15 +1,15 @@
-import React from 'react';
-//import LanguagesData from '../data';
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import LanguagesData from '../data';
+import { LanguageContext } from "../LanguageContext"; 
 
 const Info = () => {
-    const {intro, more} = LanguagesData.tr.hero;
+  const { currentContent } = useContext(LanguageContext); 
 
-    return (
-        
-        <div className="relative w-full h-screen flex flex-col md:flex-row">
+  const { intro, more } = currentContent.hero;
+
+  return (
+    <div className="relative w-full h-screen flex flex-col md:flex-row">
             <div className="w-3/5 w-full bg-indigo-600 flex justify-center items-center p-8">
                 <div className= "max-w-lg text-white">
                     <h1 className="text-4xl font-bold text-lime-200 max-w-80"> {intro}</h1>
@@ -45,7 +45,7 @@ const Info = () => {
             
             </div>
         </div>
-    );
-}
+  );
+};
 
 export default Info;
