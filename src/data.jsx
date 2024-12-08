@@ -1,5 +1,9 @@
 const LanguagesData = {
     ing: {
+      header: {
+        language: "TÜRKÇE'YE GEÇ",
+        mode: "DARK MODE",
+      },
       hero: {
         intro: "I am a Frontend Developer...",
         more: "...who likes to craft solid and scalable frontend products with great user experiences.",
@@ -13,6 +17,10 @@ const LanguagesData = {
     },
   
     tr: {
+      header: {
+        language: "SWITCH TO ENGLISH",
+        mode: "DARK MODE",
+      },
       hero: {
         intro: "Ben bir Frontend Geliştiricisiyim...",
         more: "...kullanıcılar için sağlam ve ölçeklenebilir ön yüz ürünleri geliştirmeyi seviyorum.",

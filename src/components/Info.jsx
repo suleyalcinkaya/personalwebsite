@@ -39,9 +39,9 @@ const Info = () => {
 
             <div className="w-2/5 bg-lime-300"></div>
 
-            <div className="absolute left-2/3 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <div className="absolute left-2/3 top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
 
-            <img src="./image/img.jpeg" alt="image" className='w-80 h-80 rounded-lg shadow-lg mt-8 md:mt-0'/>
+            <img src="./image/img.jpeg" alt="image" className='w-80 h-80 rounded-lg shadow-lg mt-8 md:mt-0 ' />
             
             </div>
         </div>

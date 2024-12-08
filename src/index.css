@@ -10,7 +10,7 @@ header {
     right: 0;             
     z-index: 10;          
     background-color: transparent;  
-    padding: 20px;     
+    padding: 40px;     
     display: flex;
     justify-content: space-between;  
     align-items: center;  
@@ -19,8 +19,7 @@ header {
  
   .info {
     position: relative;   
-    padding: 40px 20px;   
-    background-color: #f0f0f0;  
+    padding: 40px 20px;
     margin-top: 80px;     
   }
   
@@ -29,7 +28,7 @@ header {
     max-width: 800px;     
     margin: 0 auto;       
   }
-  
+
  
   @media (max-width: 768px) {
     header {

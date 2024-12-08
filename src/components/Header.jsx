@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { LanguageContext } from "../LanguageContext";
 
+
 const Header = () => {
   const { userLanguage, changeLanguage } = useContext(LanguageContext);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -8,6 +9,11 @@ const Header = () => {
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
     document.documentElement.classList.toggle("dark");
+
+    const { currentContent } = useContext(LanguageContext); 
+
+      const { language, mode } = currentContent.header;
+
   };
 
   return (
