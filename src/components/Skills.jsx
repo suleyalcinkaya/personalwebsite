@@ -8,7 +8,7 @@ const Skills = () => {
 
     return (
         
-            <div className="flex justify-items space-x-40 pt-20 pb-20 pl-60 ">  
+            <div className="flex justify-items space-x-40 pt-20 pb-20 pl-[16rem] ">  
 
                 <div className="flex flex-col space-y-6">
                     <h1 className="text-4xl font-bold text-indigo-600  "> {skills}</h1>

@@ -2,39 +2,37 @@ import React, { useState, useContext } from "react";
 import { LanguageContext } from "../LanguageContext";
 
 
+
+
 const Header = () => {
-  const { userLanguage, changeLanguage } = useContext(LanguageContext);
+  const { userLanguage, changeLanguage, currentContent } = useContext(LanguageContext);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
     document.documentElement.classList.toggle("dark");
-
-    const { currentContent } = useContext(LanguageContext); 
-
-      const { language, mode } = currentContent.header;
-
+ 
   };
+  const { language, mode } = currentContent.header;
 
   return (
-    <header>
-   <div className="w-3/5 w-400 flex justify-between pl-8 pr-8">
+    <header >
+   <div className="flex space-x-[28rem] pl-[16rem] ">
     
       <div className=" text-lime-300 text-xl font-bold">Şule</div>
-
       
-      <div className=" header-right flex items-center gap-4">
-        
-        <button
-          className="text-sm text-lime-300 px-3 py-1 rounded"
-          onClick={() => changeLanguage(userLanguage === "tr" ? "ing" : "tr")}
-        >
-          {userLanguage === "tr" ? "SWITCH TO ENGLISH" : "TÜRKÇE'YE GEÇ"}
-        </button>
+      <div className="flex items-center gap-4">
+          
+          <button
+            onClick={() => changeLanguage(userLanguage === "tr" ? "ing" : "tr")}
+            className="text-sm text-lime-300 px-3 py-1 rounded w-40"
+          >
+            {language}
+          </button>
 
         
         <div className="flex items-center gap-2">
-          <span className="text-sm text-indigo-500">DARK MODE</span>
+          <span className="text-sm text-indigo-500">{mode}</span>
           <label className="relative inline-flex items-center cursor-pointer">
             <input
               type="checkbox"
@@ -48,7 +46,7 @@ const Header = () => {
         </div>
 
       </div>
-      </div>
+    </div>
     </header>
   );
 };

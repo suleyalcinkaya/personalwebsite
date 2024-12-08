@@ -9,8 +9,8 @@ const Info = () => {
   const { intro, more } = currentContent.hero;
 
   return (
-    <div className="relative w-full h-screen flex flex-col md:flex-row">
-            <div className="w-3/5 w-full bg-indigo-600 flex justify-center items-center p-8">
+    <div className="relative w-full h-screen flex flex-col md:flex-row ">
+            <div className="w-3/5 w-full bg-indigo-600 flex justify-center items-center ">
                 <div className= "max-w-lg text-white">
                     <h1 className="text-4xl font-bold text-lime-200 max-w-80"> {intro}</h1>
                     <p className="mt-4 text-lg max-w-96">{more}</p>
@@ -39,7 +39,7 @@ const Info = () => {
 
             <div className="w-2/5 bg-lime-300"></div>
 
-            <div className="absolute left-2/3 top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+            <div className="absolute left-[72%] top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
 
             <img src="./image/img.jpeg" alt="image" className='w-80 h-80 rounded-lg shadow-lg mt-8 md:mt-0 ' />
             

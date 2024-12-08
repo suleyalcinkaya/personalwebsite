@@ -1,22 +1,16 @@
 import React, { createContext, useState, useEffect } from "react";
 import LanguagesData from "./data"; 
 export const LanguageContext = createContext();
-
 export const LanguageProvider = ({ children }) => {
-  const defaultLanguage = navigator.language.includes("tr") ? "tr" : "ing";
-  const [userLanguage, setUserLanguage] = useState(defaultLanguage);
-  const [currentContent, setCurrentContent] = useState(LanguagesData[defaultLanguage]);
+  const [userLanguage, setUserLanguage] = useState("ing"); 
+  const currentContent = LanguagesData[userLanguage];
 
-  useEffect(() => {
-    setCurrentContent(LanguagesData[userLanguage]);
-  }, [userLanguage]);
-
-  const changeLanguage = (lang) => {
-    setUserLanguage(lang);
+  const changeLanguage = (language) => {
+    setUserLanguage(language);
   };
 
   return (
-    <LanguageContext.Provider value={{ currentContent, userLanguage, changeLanguage }}>
+    <LanguageContext.Provider value={{ userLanguage, changeLanguage, currentContent }}>
       {children}
     </LanguageContext.Provider>
   );

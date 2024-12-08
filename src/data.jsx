@@ -19,7 +19,7 @@ const LanguagesData = {
     tr: {
       header: {
         language: "SWITCH TO ENGLISH",
-        mode: "DARK MODE",
+        mode: "GECE MODU",
       },
       hero: {
         intro: "Ben bir Frontend Geliştiricisiyim...",
